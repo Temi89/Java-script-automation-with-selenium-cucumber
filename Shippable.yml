@@ -1,1 +1,22 @@
+language: node_js
 
+node_js:
+  - 6.9.0
+
+services:
+  - selenium
+
+
+env:
+  global:
+     - NODE_ENV=test
+
+build:
+
+  ci:
+    - shippable_retry npm install --unsafe-perm
+    - mkdir -p shippable/buildoutput
+    - mkdir -p shippable/testresults
+    - sudo apt-get install xvfb
+    - export DISPLAY=:99.0
+    - shippable_retry xvfb-run --server-args="-ac" npm run bdd -- -t @regression -j ./shippable/testresults
