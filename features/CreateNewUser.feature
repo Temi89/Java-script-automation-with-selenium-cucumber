@@ -36,5 +36,4 @@ Feature: As a user I want to create a new account for mendeley
     Examples:
       | Field_study      | Academic_status |
       | Computer Science | Other           |
-      | Chemistry        | Professor       |
 
