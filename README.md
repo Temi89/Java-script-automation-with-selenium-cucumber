@@ -1,36 +1,59 @@
 # AutomationTask
 Simple Example using selenium cucumber Js
 
-Build Status:[![Run Status](https://api.shippable.com/projects/59b969cc8a029806001de73c/badge?branch=master)](https://app.shippable.com/github/Temi89/AutomationTask)
+[![Shippable branch](https://api.shippable.com/projects/59b969cc8a029806001de73c/badge?branch=master)](https://app.shippable.com/github/Temi89/AutomationTask)
 
 
-**The frame work used for the task is based on:** 
+## Tools Refrence
  selenium cucumber Js: https://www.npmjs.com/package/selenium-cucumber-js 
  cucumber js
  selenium webdriver (driving the web application): https://www.npmjs.com/package/selenium-webdriver
  selenium webdriver api documentation :  https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/promise.html
  Faker(generate random data fo testing): https://www.npmjs.com/package/faker
 
-Page-objects: been used to make life easier so that there is a central place if tests needs to be changed and elements updated
+ Page-objects: been used to make life easier so that there is a central place if tests needs to be changed and elements updated
 
-reports - here you can find html formats after tests run successfully
-
-**To get up and running I have created directory that containing** 
-
-features : where I have captured and described scenarios using cucumber Js (Gherkin language)
-shared-Objects: include property files which could be extended in the future they contain some test data used in this excersise such as Url's 
-Step-definitions: in this directory i have defined 3 js files
-joinform_steps: This would contain all definitions relating to filling the form including first and last part of the form 
-library_steps: On successful creation of a user by default the selected menu item is Library and this would also contain definitions specific to the behavior of this page 
-login_steps: contains definitions used to create a new user 
-
-Npm install (this should install all the dev depencies required for this project)
-
-In the Package.json a script has been made to make running the test easy . The test could also be run on both chrome and firefox
+ ### Reports
  
-**The following commands would assist :**
+ HTML and JSON reports are automatically generated and stored in the default `./reports` folder. This location can be changed by providing a new path using the `-r` command line switch:
  
+ ![Cucumber HTML report](img/cucumber-html-report.png)
+ 
+
+### Directory structure
+
+You can use the framework without any command line arguments if your application uses the following folder structure:
+
+```bash
+.
+├── features
+│   └── google-search.feature
+├── step-definitions
+│   └── google-search-steps.js
+├── page-objects
+│   └── google-search.js
+└── shared-objects
+│   ├── test-data.js
+│   └── stuff.json
+└── reports
+    ├── cucumber-report.json
+    └── cucumber-report.html
+```
+
+## Installation
+
+```bash
+npm install 
+```
+
+## Usage
+
+```bash
  Firefox : Npm run bdd -- -t @CreateUser -b firefox
  Chrome :  Npm run bdd -- -t @CreateUser 
+ ```
+
+ 
+
  
  
