@@ -6,17 +6,23 @@ node_js:
 services:
   - selenium
 
+addons:
+    firefox: "49.0"
+
 
 env:
   global:
+     - DBUS_SESSION_BUS_ADDRESS=/dev/null
      - NODE_ENV=test
 
 build:
 
   ci:
     - shippable_retry npm install --unsafe-perm
+    - shippable_retry npm uninstall geckodriver
+    - shippable_retry npm install geckodriver@1.4.0
     - mkdir -p shippable/buildoutput
     - mkdir -p shippable/testresults
     - sudo apt-get install xvfb
     - export DISPLAY=:99.0
-    - shippable_retry xvfb-run --server-args="-ac" npm run bdd -- -t @CreateUser -j ./shippable/testresults
+    - shippable_retry xvfb-run --server-args="-ac" npm run bdd -- -t @CreateUser -b firefox -j ./shippable/testresults
