@@ -1,6 +1,9 @@
 # AutomationTask
 Simple Example using selenium cucumber Js
 
+Build Status:[![Run Status](https://api.shippable.com/projects/59b969cc8a029806001de73c/badge?branch=master)](https://app.shippable.com/github/Temi89/AutomationTask)
+
+
 **The frame work used for the task is based on:** 
  selenium cucumber Js: https://www.npmjs.com/package/selenium-cucumber-js 
  cucumber js
