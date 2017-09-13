@@ -19,4 +19,4 @@ build:
     - mkdir -p shippable/testresults
     - sudo apt-get install xvfb
     - export DISPLAY=:99.0
-    - shippable_retry xvfb-run --server-args="-ac" npm run bdd -- -t @regression -j ./shippable/testresults
+    - shippable_retry xvfb-run --server-args="-ac" npm run bdd -- -t @CreateUser -j ./shippable/testresults
