@@ -5,13 +5,15 @@ Simple Example using selenium cucumber Js
 
 
 ## Tools Refrence
+
+```bash
  selenium cucumber Js: https://www.npmjs.com/package/selenium-cucumber-js 
  cucumber js
  selenium webdriver (driving the web application): https://www.npmjs.com/package/selenium-webdriver
  selenium webdriver api documentation :  https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/promise.html
  Faker(generate random data fo testing): https://www.npmjs.com/package/faker
-
  Page-objects: been used to make life easier so that there is a central place if tests needs to be changed and elements updated
+```
 
  ### Reports
  
